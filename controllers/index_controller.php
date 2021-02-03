@@ -52,12 +52,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         setcookie('postal',$postal,time()+3600*24,"exoLovers","exoLovers",false,true);
         setcookie('email',$email,time()+3600*24,"exoLovers","exoLovers",false,true);
         setcookie('type',$type,time()+3600*24,"exoLovers","exoLovers",false,true);
-        header('Location: ../views/lovers.php/');
+        header('Location: /exoLovers/views/lovers.php/');
         exit();
     }
     else {
         $_SESSION['errors'] = $errors;
-        header('Location: ../index.php/');
+        header('Location: /exoLovers/index.php/');
         exit();
     }
 }
