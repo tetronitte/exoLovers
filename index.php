@@ -33,7 +33,7 @@
             <div class="row-form">
                 <label for="age">Age :</label>
                 <input type="text" name="age"/>
-                <img src="/assets/img/error.png" alt="erreur sur l'age" title="Erreur sur l'age" width="30" height="30" <?php if(empty($_SESSION['errors']) || !in_array('E_AGE_REGEX_FALSE',$_SESSION['errors']) || !in_array('E_AGE_YOUNGER',$_SESSION['errors'])) echo 'hidden' ?>>
+                <img src="/assets/img/error.png" alt="erreur sur l'age" title="Erreur sur l'age" width="30" height="30" <?php if(empty($_SESSION['errors']) || (!in_array('E_AGE_REGEX_FALSE',$_SESSION['errors']) && !in_array('E_AGE_YOUNGER',$_SESSION['errors']))) echo 'hidden' ?>>
             </div>
             <div class="row-form">
                 <label for="gender">Genre :</label>
