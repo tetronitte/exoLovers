@@ -1,6 +1,6 @@
 <?php
     if(count($_COOKIE) > 1) {
-        header('Location: ../index.php/');
+        header('Location: views/lovers.php/');
         exit();
     }
     else {

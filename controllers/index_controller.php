@@ -45,23 +45,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         if(!in_array($type,$typeArray)) $errors[] = 'E_TYPE_NOT_EXIST';
     }
     if(empty($errors)) {
-        setcookie('lastname',$lastname,time()+3600*24);
-        setcookie('firstname',$firstname,time()+3600*24);
-        setcookie('age',$age,time()+3600*24);
-        setcookie('gender',$gender,time()+3600*24);
-        setcookie('postal',$postal,time()+3600*24);
-        setcookie('email',$email,time()+3600*24);
-        setcookie('type',$type,time()+3600*24);
+        setcookie('lastname',$lastname,time()+3600*24,"exoLovers","exoLovers",false,true);
+        setcookie('firstname',$firstname,time()+3600*24,"exoLovers","exoLovers",false,true);
+        setcookie('age',$age,time()+3600*24,"exoLovers","exoLovers",false,true);
+        setcookie('gender',$gender,time()+3600*24,"exoLovers","exoLovers",false,true);
+        setcookie('postal',$postal,time()+3600*24,"exoLovers","exoLovers",false,true);
+        setcookie('email',$email,time()+3600*24,"exoLovers","exoLovers",false,true);
+        setcookie('type',$type,time()+3600*24,"exoLovers","exoLovers",false,true);
         header('Location: ../views/lovers.php/');
         exit();
-        // setcookie('lastname');
-        // setcookie('firstname');
-        // setcookie('age');
-        // setcookie('gender');
-        // setcookie('postal');
-        // setcookie('email');
-        // setcookie('type');
-        // var_dump($_COOKIE);
     }
     else {
         $_SESSION['errors'] = $errors;
