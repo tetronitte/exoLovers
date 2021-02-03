@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+unset($_SESSION['errors']);
+
 $errors = array();
 $genderArray = ['homme','femme','androgyne'];
 $typeArray = ['homme','femme','androgyne','homme et femme','homme et androgyne','femme et androgyne'];
@@ -61,7 +64,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         // var_dump($_COOKIE);
     }
     else {
-        session_start();
         $_SESSION['errors'] = $errors;
         header('Location: ../index.php/');
         exit();

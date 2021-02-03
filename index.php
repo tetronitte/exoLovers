@@ -64,6 +64,5 @@
             </div>
             <button type="submit">Rencontrer nos célibataires</button>
         </form>
-        <?php unset($_SESSION['errors']); ?>
     </body>
 </html>
