@@ -49,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         setcookie('postal',$postal,time()+3600*24);
         setcookie('email',$email,time()+3600*24);
         setcookie('type',$type,time()+3600*24);
-        header('../views/lovers.php/');
+        header('Location: ../views/lovers.php/');
         exit();
         // setcookie('lastname');
         // setcookie('firstname');

@@ -6,9 +6,6 @@
     else {
         session_start();
     }
-    
-
-
 ?>
 
 <!doctype html>
@@ -67,5 +64,6 @@
             </div>
             <button type="submit">Rencontrer nos célibataires</button>
         </form>
+        <?php unset($_SESSION['errors']); ?>
     </body>
 </html>
