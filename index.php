@@ -26,17 +26,17 @@
         <form action="<?php echo INDEX_CONTROLLER ?>" method="POST">
             <div class="row-form">
                 <label for="lastname">Nom :</label>
-                <input type="text" name="lastname" value="ndc"/>
+                <input type="text" name="lastname"/>
                 <img src="<?php echo ERROR_IMG ?>" alt="erreur sur le nom" title="Erreur sur le nom" width="30" height="30" <?php if(empty($_SESSION['errors']) || !in_array('E_LASTNAME_REGEX_FALSE',$_SESSION['errors'])) echo 'hidden' ?>>
             </div>
             <div class="row-form">
                 <label for="firstname">Prénom :</label>
-                <input type="text" name="firstname" value="axel"/>
+                <input type="text" name="firstname"/>
                 <img src="<?php echo ERROR_IMG ?>" alt="erreur sur le prénom" title="Erreur sur le prénom" width="30" height="30" <?php if(empty($_SESSION['errors']) || !in_array('E_FIRSTNAME_REGEX_FALSE',$_SESSION['errors'])) echo 'hidden' ?>>
             </div>
             <div class="row-form">
                 <label for="age">Age :</label>
-                <input type="text" name="age" value="26"/>
+                <input type="text" name="age"/>
                 <img src="<?php echo ERROR_IMG ?>" alt="erreur sur l'age" title="Erreur sur l'age" width="30" height="30" <?php if(empty($_SESSION['errors']) || (!in_array('E_AGE_REGEX_FALSE',$_SESSION['errors']) && !in_array('E_AGE_YOUNGER',$_SESSION['errors']))) echo 'hidden' ?>>
             </div>
             <div class="row-form">
@@ -50,19 +50,19 @@
             </div>
             <div class="row-form">
                 <label for="postal">Code postal :</label>
-                <input type="text" name="postal" value="80000"/>
+                <input type="text" name="postal"/>
                 <img src="<?php echo ERROR_IMG ?>" alt="erreur sur le code postal" title="Erreur sur le code postal" width="30" height="30" <?php if(empty($_SESSION['errors']) || !in_array('E_POSTAL_REGEX_FALSE',$_SESSION['errors'])) echo 'hidden' ?>>
             </div>
             <div class="row-form">
                 <label for="email">Adresse mail</label>
-                <input type="email" name="email" value="axel.ndc@gmail.com"/>
+                <input type="email" name="email"/>
                 <img src="<?php echo ERROR_IMG ?>" alt="erreur sur l'email" title="Erreur sur l'email" width="30" height="30" <?php if(empty($_SESSION['errors']) || !in_array('E_EMAIL_REGEX_FALSE',$_SESSION['errors'])) echo 'hidden' ?>>
             </div>
             <div class="row-form">
                 <label for="type">Votre type de recherche</label>
                 <select name="type">
                     <option value="homme">homme</option>
-                    <option value="femme" selected>femme</option>
+                    <option value="femme">femme</option>
                     <option value="androgyne">androgyne</option>
                     <option value="homme et femme">homme et femme</option>
                     <option value="homme et androgyne">homme et androgyne</option>
