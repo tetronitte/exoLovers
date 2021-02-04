@@ -1,28 +1,25 @@
 <?php
-    var_dump($_COOKIE);
+    include('../controllers/const_path.php');
+    session_start();
 ?>
+
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="<?php echo NAVBAR_CSS ?>">
     </head>
     <body>
-        <?php include('navbar.php'); ?>
+        <?php 
+        
+            include('navbar.php'); 
+            if(isset($_SESSION['user'])) echo $_SESSION['user'];
+        
+        ?>
 
-        <div>
-            <span>Nom :<?php if(isset($_COOKIE['lastname'])) echo ' '.$_COOKIE['lastname'] ?></span>
-            <span>Prénom :<?php if(isset($_COOKIE['firstname'])) echo ' '.$_COOKIE['firstname'] ?></span>
-            <span>Age :<?php if(isset($_COOKIE['age'])) echo ' '.$_COOKIE['age'] ?></span>
-            <span>Genre :<?php if(isset($_COOKIE['gender'])) echo ' '.$_COOKIE['gender'] ?></span>
-            <span>Code postal :<?php if(isset($_COOKIE['postal'])) echo ' '.$_COOKIE['postal'] ?></span>
-            <span>Adresse mail :<?php if(isset($_COOKIE['email'])) echo ' '.$_COOKIE['email'] ?></span>
-            <span>Type :<?php if(isset($_COOKIE['type'])) echo ' '.$_COOKIE['type'] ?></span>
-        </div>
-
-        <form action="../controllers/user_controller.php/" method="POST">
+        <form action="<?php echo USER_CONTROLLER ?>" method="POST">
             <button type="submit">EFFACER TOUTES TRACES</button>
         </form>
 

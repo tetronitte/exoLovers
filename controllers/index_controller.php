@@ -1,11 +1,11 @@
 <?php
-
+include('const_path.php');
 session_start();
 unset($_SESSION['errors']);
 
 $errors = array();
 $genderArray = ['homme','femme','androgyne'];
-$typeArray = ['homme','femme','androgyne','homme et femme','homme et androgyne','femme et androgyne'];
+$typeArray = ['homme','femme','androgyne','homme et femme','homme et androgyne','femme et androgyne','tout'];
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Nom
@@ -45,19 +45,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         if(!in_array($type,$typeArray)) $errors[] = 'E_TYPE_NOT_EXIST';
     }
     if(empty($errors)) {
-        setcookie('lastname',$lastname,time()+3600*24,"exoLovers","exoLovers",false,true);
-        setcookie('firstname',$firstname,time()+3600*24,"exoLovers","exoLovers",false,true);
-        setcookie('age',$age,time()+3600*24,"exoLovers","exoLovers",false,true);
-        setcookie('gender',$gender,time()+3600*24,"exoLovers","exoLovers",false,true);
-        setcookie('postal',$postal,time()+3600*24,"exoLovers","exoLovers",false,true);
-        setcookie('email',$email,time()+3600*24,"exoLovers","exoLovers",false,true);
-        setcookie('type',$type,time()+3600*24,"exoLovers","exoLovers",false,true);
-        header('Location: /exoLovers/views/lovers.php/');
+        setcookie('lastname',$lastname,time()+3600*24,'/');
+        setcookie('firstname',$firstname,time()+3600*24,'/');
+        setcookie('age',$age,time()+3600*24,'/');
+        setcookie('gender',$gender,time()+3600*24,'/');
+        setcookie('postal',$postal,time()+3600*24,'/');
+        setcookie('email',$email,time()+3600*24,'/');
+        setcookie('type',$type,time()+3600*24,'/');
+        header('Location: '.LOVERS);
         exit();
     }
     else {
         $_SESSION['errors'] = $errors;
-        header('Location: /exoLovers/index.php/');
+        header('Location: '.INDEX);
         exit();
     }
 }

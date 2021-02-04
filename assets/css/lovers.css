@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(206, 104, 121);
+}
+.cards-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.card {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 18em;
+    border: black solid 1px;
+}
+.card-img-top {
+    height: 70%;
+    border-bottom: black 1px solid;
+}
+.card-title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.card-text {
+    margin-top: 15px;
+}
