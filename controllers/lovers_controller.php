@@ -52,6 +52,7 @@ function createCards() {
             $card .= '<div class="card-body">';
             $card .= '<span class="card-title">'.$elem['firstname'].' '.$elem['lastname'].' - '.$elem['age'].' - '.$elem['postal'].'</span>';
             $card .= '<p class="card-text">'.$elem['infos'].'</p>';
+            $card .= '<button class="card-button"><3</button>';
             $card .= '</div></div>';
             $cards[] = $card;
             $card = "";

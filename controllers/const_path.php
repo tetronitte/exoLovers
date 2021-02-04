@@ -22,4 +22,6 @@
     define('ERROR_IMG', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/img/error.png');
     define('LOVERS_IMG', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/img/');
 
+    //JS
+    define('LOVERS_JS', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/js/lovers.js');
 ?>
