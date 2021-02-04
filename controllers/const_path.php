@@ -3,6 +3,7 @@
     define('STYLE_CSS', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/css/style.css');
     define('LOVERS_CSS', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/css/lovers.css');
     define('NAVBAR_CSS', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/css/navbar.css');
+    define('USER_CSS', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets/css/user.css');
 
     //JSON
     define('JSON', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].'/exoLovers/assets//json/lovers.json');

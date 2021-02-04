@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(206, 104, 121);
+    height: 100vh;
+}
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.row .value {
+    font-size: 1.5em;
+}
+.row .title{
+    font-weight: bold;
+    font-size: 2em;
+}
+.submit {
+    background-color: #495057;
+    color: white;
+    font-weight: bold;
+    border: black solid 2px;
+    height: 100px;
+    width: 500px;
+    font-size: 2em;
+    margin-top: 40px;
+}
