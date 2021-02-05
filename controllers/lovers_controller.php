@@ -63,7 +63,7 @@ function createCards() {
 
 function createJSON() {
     if (!file_exists(JSON)) {
-        file_put_contents(JSON);
+        file_put_contents(JSON,'');
     }
     $json = file_get_contents(JSON);
     $array = json_decode($json,true);
@@ -83,4 +83,3 @@ function createJSON() {
     $json = json_encode($array);
     file_put_contents(JSON,$json);
 }
-?>

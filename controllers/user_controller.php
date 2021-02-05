@@ -52,9 +52,3 @@
         header('Location: '.USER);
         exit();
     }
-
-
-    
-    
-
-?>

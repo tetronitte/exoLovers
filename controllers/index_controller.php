@@ -90,5 +90,3 @@ function validData($data) {
     $data = htmlspecialchars($data);//Convertit les caractères spéciaux
     return $data;
 }
-
-?>
