@@ -8,7 +8,7 @@
 
 
 function displayJSON() {
-    $json = file_get_contents('../assets/json/lovers.json');
+    $json = file_get_contents(JSON);
     $array = json_decode($json,true);
 
     $type = $_COOKIE['type'];
@@ -62,10 +62,10 @@ function createCards() {
 }
 
 function createJSON() {
-    if (!file_exists('../assets/json/lovers.json')) {
-        file_put_contents('../assets/json/lovers.json','lovers');
+    if (!file_exists(JSON)) {
+        file_put_contents(JSON);
     }
-    $json = file_get_contents('../assets/json/lovers.json');
+    $json = file_get_contents(JSON);
     $array = json_decode($json,true);
     $array['homme'] = array(
         array('img' => 'arno_lapoutre.jpg','lastname' => 'Lapoutre','firstname' => 'Arno','age' => '29', 'postal' => '80000', 'infos' => 'Je suis chaud de la night !'),
@@ -81,6 +81,6 @@ function createJSON() {
         array('img' => 'tilda_swinton.jpg','lastname' => 'Swinton','firstname' => 'Tilda','age' => '60', 'postal' => '75000', 'infos' => 'Salut je joue l\'ancien dans Doctor Strange et la méchante dans Narnia !'),
         array('img' => 'eliott_sailors.jpg','lastname' => 'Sailors','firstname' => 'Elliott','age' => '33', 'postal' => '98456', 'infos' => 'Je suis modèle photo'));
     $json = json_encode($array);
-    file_put_contents('../assets/json/lovers.json',$json);
+    file_put_contents(JSON,$json);
 }
 ?>
